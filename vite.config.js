@@ -2,9 +2,9 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  // Make built asset links relative so they load properly on Netlify
-  base: './',
+  base: './',        // ← relative paths so assets load correctly
   build: {
     outDir: 'dist'
   }
 })
+
