@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-//import { GoogleGenAI, Modality } from '@google/genai';
+
 import { ChatMessage } from '../types';
 import { decode, decodeAudioData } from '../utils/audio';
 
@@ -10,7 +10,7 @@ const Chatbot: React.FC = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [isSynthesizing, setIsSynthesizing] = useState<number | null>(null);
 
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
+  
     const audioContextRef = useRef<AudioContext | null>(null);
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
